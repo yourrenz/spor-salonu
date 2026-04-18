@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Küçükçekmece Halkali Gençlik Merkezi – Spor Salonu</title>
+  <title>Küçükçekmece Halkalı Gençlik Merkezi – Spor Salonu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
@@ -18,6 +18,7 @@
       --gray:    #8a8f99;
       --card:    #111e2e;
       --green:   #3cb97a;
+      --purple:  #8b5cf6;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -122,13 +123,20 @@
     .ex-card { background:var(--navy); padding:28px; border-left:3px solid var(--accent); }
     .ex-card.green { border-left-color:var(--green); }
     .ex-card.orange { border-left-color:var(--accent2); }
+    .ex-card.purple { border-left-color:var(--purple); }
     .ex-card h4 { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.04em; margin-bottom:6px; }
     .ex-card .muscles { font-size:.72rem; color:var(--accent); font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:14px; }
     .ex-card.green .muscles { color:var(--green); }
     .ex-card.orange .muscles { color:var(--accent2); }
+    .ex-card.purple .muscles { color:var(--purple); }
     .ex-card p { font-size:.85rem; color:rgba(255,255,255,.65); line-height:1.6; }
 
-    .prog-section { background:var(--navy); position:relative; overflow:hidden; }
+    .pilates-section { background:linear-gradient(135deg,var(--navy),#0b1521); }
+    .pilates-banner { display:flex; align-items:center; background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.3); padding:20px; margin-top:30px; border-radius:4px; gap:16px;}
+    .pilates-banner .icon { font-size:2rem; }
+    .pilates-banner .text p { font-size:0.85rem; color:rgba(255,255,255,0.8); line-height:1.5; margin-top:6px;}
+
+    .prog-section { background:var(--card); position:relative; overflow:hidden; }
     .prog-section::after { content:'PROGRAM'; position:absolute; right:-60px; top:50%; transform:translateY(-50%); font-family:'Bebas Neue',sans-serif; font-size:17rem; color:rgba(245,177,0,.025); pointer-events:none; }
     .prog-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; margin-top:56px; align-items:start; }
     .timeline { display:flex; flex-direction:column; }
@@ -142,13 +150,13 @@
     .tdot.w { background:rgba(255,255,255,.05); border:2px solid rgba(255,255,255,.2); color:rgba(255,255,255,.4); }
     .tcontent h4 { font-family:'Bebas Neue',sans-serif; font-size:1.35rem; margin-bottom:6px; letter-spacing:.04em; }
     .tcontent p { font-size:.85rem; color:rgba(255,255,255,.58); line-height:1.65; }
-    .tips-box { background:var(--card); padding:38px; border-left:4px solid var(--accent); }
+    .tips-box { background:var(--navy); padding:38px; border-left:4px solid var(--accent); }
     .tips-box h4 { font-family:'Bebas Neue',sans-serif; font-size:1.7rem; color:var(--accent); letter-spacing:.04em; margin-bottom:22px; }
     .tips-list { list-style:none; display:flex; flex-direction:column; gap:16px; }
     .tips-list li { display:flex; gap:14px; align-items:flex-start; font-size:.86rem; line-height:1.6; color:rgba(255,255,255,.72); }
     .tip-i { width:28px; height:28px; background:rgba(245,177,0,.1); display:flex; align-items:center; justify-content:center; font-size:.82rem; flex-shrink:0; margin-top:1px; }
 
-    .gallery-section { background:var(--card); padding:96px 0; }
+    .gallery-section { background:var(--navy); padding:96px 0; }
     .gallery-header { padding:0 48px; margin-bottom:44px; }
     .gallery-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:300px 300px; gap:4px; }
     .gitem { overflow:hidden; position:relative; }
@@ -158,9 +166,9 @@
     .gcap { position:absolute; bottom:0; left:0; right:0; padding:14px 18px; background:linear-gradient(transparent,rgba(0,0,0,.7)); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.8); opacity:0; transition:opacity .3s; }
     .gitem:hover .gcap { opacity:1; }
 
-    .learn-section { background:var(--navy); }
+    .learn-section { background:var(--card); }
     .learn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:52px; }
-    .learn-card { background:var(--card); padding:32px 28px; border-top:4px solid var(--accent); }
+    .learn-card { background:var(--navy); padding:32px 28px; border-top:4px solid var(--accent); }
     .learn-card.lc2 { border-top-color:var(--green); }
     .learn-card.lc3 { border-top-color:var(--accent2); }
     .learn-card .lnum { font-family:'Bebas Neue',sans-serif; font-size:3.5rem; color:rgba(255,255,255,.06); line-height:1; margin-bottom:-10px; }
@@ -194,6 +202,7 @@
     .fcol ul li a { color:var(--gray); text-decoration:none; transition:color .2s; }
     .fcol ul li a:hover { color:var(--white); }
     .foot-bot { background:#060e17; padding:18px 48px; border-top:1px solid rgba(255,255,255,.05); display:flex; justify-content:space-between; font-size:.75rem; color:var(--gray); }
+    .foot-bot .dev-credit { color: rgba(255,255,255,0.4); font-style: italic;}
 
     @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
     @keyframes fadeIn { from{opacity:0} to{opacity:1} }
@@ -223,22 +232,21 @@
   <div class="nav-logo">KÜÇÜKÇEKMECE <span>GENÇLİK MERKEZİ</span></div>
   <ul class="nav-links">
     <li><a href="#hakkinda">Hakkında</a></li>
-    <li><a href="#iletisim">İletişim</a></li>
     <li><a href="#sikletler">Sikletler</a></li>
     <li><a href="#hareketler">Hareketler</a></li>
+    <li><a href="#klinik-pilates">Klinik Pilates</a></li>
     <li><a href="#program">Program</a></li>
     <li><a href="#galeri">Galeri</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="ana">
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-badge">▶ Spor Salonu &amp; Reformer Pilates</div>
+    <div class="hero-badge">▶ Spor Salonu &amp; Fizik Tedavi Pilatesi</div>
     <h1>GELECEĞİN<span class="hl">SPORCULARI</span>BURADAN ÇIKIYOR</h1>
     <p class="hero-desc">
-      Halkali Gençlik Merkezi Spor Salonu; Fitness ve Reformer Pilates dallarında 550 kişilik kapasitesiyle, 6 uzman personel eşliğinde hizmet vermektedir. Kardiyovasküler dayanıklılıktan güç antrenmanlarına kadar her şey tek çatı altında.
+      Halkalı Gençlik Merkezi Spor Salonu; Fitness ve Reformer (Klinik) Pilates dallarında 550 kişilik kapasitesiyle, uzman eğitmenler ve fizyoterapistler eşliğinde hizmet vermektedir. Omurga sağlığından güç antrenmanlarına kadar her şey tek çatı altında.
     </p>
     <div class="hero-cta">
       <a href="#sikletler" class="btn-p">Antrenman Seviyeni Keşfet</a>
@@ -248,87 +256,44 @@
   <div class="hero-visual">
     <div class="img-stack">
       <div class="stat-badge"><span class="n">550</span><span class="l">Kişilik Kapasite</span></div>
-      <img class="img-main" src="spr_3.jpg" alt="Spor Salonu" />
-      <img class="img-sub"  src="spr2.jpg"  alt="Ekipmanlar" />
+      <img class="img-main" src="WhatsApp Image 2026-04-18 at 13.24.39 (4).jpg" alt="Spor Salonu Cardio Alanı" />
+      <img class="img-sub"  src="WhatsApp Image 2026-04-18 at 13.24.40 (4).jpg" alt="Reformer Pilates Eğitimi" />
     </div>
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-row">
   <div class="stat-item reveal"><div class="n">550</div><div class="t">Kişilik Kapasiteli Spor Salonu</div></div>
   <div class="stat-item reveal"><div class="n">6</div><div class="t">Uzman Personel &amp; Eğitmen</div></div>
-  <div class="stat-item reveal"><div class="n">2</div><div class="t">Disiplin: Fitness &amp; Reformer Pilates</div></div>
+  <div class="stat-item reveal"><div class="n">2</div><div class="t">Disiplin: Fitness &amp; Fizik Tedavi Pilatesi</div></div>
   <div class="stat-item reveal"><div class="n">3</div><div class="t">Antrenman Seviyesi: Hafif · Orta · Ağır</div></div>
 </div>
 
-<!-- HAKKINDA -->
 <section class="about" id="hakkinda">
   <div class="about-imgs reveal">
-    <img src="spr.jpg"   alt="Spor Salonu Genel Görünüm" />
-    <img src="spr2.jpg"  alt="Ağırlık Ekipmanları" />
-    <img src="spr_3.jpg" alt="Cardio Alan" />
+    <img src="WhatsApp Image 2026-04-18 at 13.24.40 (5).jpg" alt="Reformer Pilates Ders" />
+    <img src="WhatsApp Image 2026-04-18 at 13.24.39 (2).jpg" alt="Ağırlık Ekipmanları Omuz Baskı" />
+    <img src="spr2.jpg" alt="Genel Salon Görünümü" />
   </div>
   <div>
     <span class="stag">Gençlik Merkezi · Hakkında</span>
     <h2 class="stitle">HALKALI GENÇLİK MERKEZİ FİTNESS SALONU</h2>
     <p class="sdesc">
-      Halkalı Merkez Mahallesi'nde hizmet veren merkezimiz; aerobik egzersizler, kuvvet antrenmanları ve esneklik hareketleriyle gençlerin fiziksel potansiyellerini keşfetmelerine olanak tanır. Sağlıklı bir geleceğin anahtarı aktif ve dengeli bir yaşam tarzında yatar.
+      Halkalı Merkez Mahallesi'nde hizmet veren merkezimiz; aerobik egzersizler, kuvvet antrenmanları ve esneklik hareketleriyle gençlerin fiziksel potansiyellerini keşfetmelerine olanak tanır.
     </p>
     <p class="sdesc" style="margin-top:14px;">
-      Reformer Pilates ve Fitness ile gençlerimizin bedensel ve zihinsel sağlığını destekleyerek aktif bir yaşam tarzını teşvik ederiz. Her iki disiplin de uzman eğitmen rehberliğinde güvenli ve etkili bir şekilde uygulanır.
+      Sadece spor amaçlı değil, sağlık sorunlarını tedavi etmeye yönelik <strong>Klinik Pilates (Fizik Tedavi Pilatesi)</strong> hizmetimizle bel/boyun fıtıkları ve duruş bozuklukları uzman fizyoterapist kontrolünde modifiye hareketlerle iyileştirilmektedir.
     </p>
     <div class="feat-list">
       <div class="feat reveal"><div class="ico">🏋️</div><div class="txt">Maxtech marka profesyonel fitness ekipmanları</div></div>
-      <div class="feat reveal"><div class="ico">🧘</div><div class="txt">Reformer Pilates stüdyosu — bedensel ve zihinsel sağlık</div></div>
+      <div class="feat reveal"><div class="ico">🧘</div><div class="txt">Klinik Pilates stüdyosu — omurga ve beden sağlığı</div></div>
       <div class="feat reveal"><div class="ico">🏃</div><div class="txt">Koşu bantları, bisikletler ve geniş kardiyovasküler alan</div></div>
-      <div class="feat reveal"><div class="ico">👨‍🏫</div><div class="txt">6 uzman personel eşliğinde güvenli antrenman ortamı</div></div>
+      <div class="feat reveal"><div class="ico">👨‍⚕️</div><div class="txt">Fizyoterapist ve uzman personel eşliğinde güvenli antrenman</div></div>
       <div class="feat reveal"><div class="ico">🕘</div><div class="txt">Çalışma saatleri: 09:00 – 19:00</div></div>
     </div>
   </div>
 </section>
 
-<!-- İLETİŞİM -->
-<section class="info-section" id="iletisim">
-  <span class="stag">Merkez Bilgileri</span>
-  <h2 class="stitle">İLETİŞİM &amp; ULAŞIM</h2>
-  <div class="info-grid">
-    <div class="info-card reveal">
-      <span class="ic-tag">📍 Adres &amp; İletişim</span>
-      <h4>KONUM</h4>
-      <p>Halkalı Merkez Mah. Osmangazi Cad.<br>Zafer Cömert Sokak Kesişimi<br><strong>Küçükçekmece / İstanbul</strong></p>
-      <br>
-      <p>📞 <strong>444 4 360 / 7996</strong><br>(Spor Kayıt Masası)</p>
-      <br>
-      <p>🕘 <strong>Çalışma Saatleri:</strong> 09:00 – 19:00</p>
-    </div>
-    <div class="info-card reveal">
-      <span class="ic-tag">🚌 Toplu Taşıma</span>
-      <h4>ULAŞIM</h4>
-      <p style="margin-bottom:12px;"><strong>Sabahattin Zaim Üniversitesi Durağı'ndan</strong> yaklaşık 4 dakika yürüyüşle ulaşabilirsiniz.</p>
-      <ul>
-        <li>98KM — Fenertepe / Sefaköy Metrobüs</li>
-        <li>89A — K.S.Süleyman Hast. / Zeytinburnu Metro</li>
-        <li>HT20 — Şahintepe / Yenibosna Metro</li>
-        <li>76O — Avcılar Cihangir Mah. / Otogar</li>
-        <li>89 — K.S.S. Hastanesi / Aksaray</li>
-      </ul>
-    </div>
-    <div class="info-card reveal">
-      <span class="ic-tag">📝 Kayıt</span>
-      <h4>BAŞVURU</h4>
-      <p style="margin-bottom:16px;">Spor salonuna kaydolmak ve program bilgisi almak için aşağıdaki kanalları kullanabilirsiniz:</p>
-      <ul>
-        <li><a href="https://forms.kucukcekmece.bel.tr" target="_blank">Online kayıt formu →</a></li>
-        <li><a href="https://sikayet.kucukcekmece.bel.tr/istek_Sikayet_bildirim" target="_blank">Talep &amp; şikayet →</a></li>
-        <li>Telefon: 444 4 360 / 7996</li>
-        <li><a href="https://kucukcekmece.istanbul" target="_blank">kucukcekmece.istanbul</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SIKLETLER -->
 <section class="weight-section" id="sikletler">
   <span class="stag">Antrenman Rehberi</span>
   <h2 class="stitle">HAFİF · ORTA · AĞIR SİKLET</h2>
@@ -342,12 +307,9 @@
       <div class="wdiv"></div>
       <ul class="wlist">
         <li>Amaç ağırlık kaldırmak değil, hareketlerin doğru formunu öğrenmektir</li>
-        <li>5–10 dk düşük yoğunluklu kardiyo ve dinamik hareketlerle ısınma (statik germe değil)</li>
+        <li>5–10 dk düşük yoğunluklu kardiyo ve dinamik hareketlerle ısınma</li>
         <li>12–15 tekrarı rahat kontrol edebildiğiniz ağırlık seviyesinde çalışılır</li>
-        <li>Boş bar veya çok hafif ağırlıkla 1–2 form seti: sinir sistemi ve kaslar harekete hazırlanır</li>
         <li>Aynanın önünde çalışın; formu kontrol edin ve gerekirse eğitmen isteyin</li>
-        <li>Sıralama: büyük kas gruplarından küçüğe → bacak, sırt, göğüs, kol</li>
-        <li>Bu dönemde 2 saatlik antrenman değil, kısa ve kaliteli seans hedefleyin</li>
       </ul>
     </div>
     <div class="wcard orta reveal">
@@ -359,11 +321,8 @@
       <ul class="wlist">
         <li>Form ve teknik oturduktan sonra ağırlıklar kademeli olarak artırılır</li>
         <li>8–12 tekrar aralığında zorlanacağınız, ancak formu bozmayacağınız seviye</li>
-        <li>Ana çalışma setlerinde hedeflenen tekrar sayısı teknik bozulmadan tamamlanır</li>
-        <li>Setler arası 60–90 saniye dinlenme; kaslar toparlanır, bir sonraki set verimli olur</li>
-        <li>Her 1–2 haftada bir ağırlıkları %2–10 oranında artırın (lineer progresyon)</li>
-        <li>Hem hafif hem ağır ağırlıklar kas gelişimine katkı sağlar — orta bölge en verimlisidir</li>
-        <li>Müsabık sporcu değilseniz uzun vadede bu bölgede kalmak en sağlıklı yaklaşımdır</li>
+        <li>Setler arası 60–90 saniye dinlenme; kaslar toparlanır</li>
+        <li>Her 1–2 haftada bir ağırlıkları %2–10 oranında artırın</li>
       </ul>
     </div>
     <div class="wcard agir reveal">
@@ -375,95 +334,128 @@
       <ul class="wlist">
         <li>Squat, Deadlift, Bench Press gibi temel hareketlerde form mükemmelleşince geçilir</li>
         <li>5–8 tekrar aralığında çalışabileceğiniz yüksek ağırlık seviyeleri hedeflenir</li>
-        <li>Ağır setler arası 2–3 dakika tam dinlenme zorunludur; atlanmaz</li>
-        <li>İsteğe bağlı tükeniş seti: enerji kalırsa son set daha ağır yapılabilir</li>
-        <li>Form bozulursa ağırlığı düşürün — sakatlanmanın tek nedeni budur</li>
+        <li>Ağır setler arası 2–3 dakika tam dinlenme zorunludur</li>
         <li>İlk 30 günde lineer progresyon yöntemiyle görünür güç artışı mümkündür</li>
-        <li>Bu seviye için mutlaka uzman eğitmen eşliği önerilir</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- TEMEL HAREKETLER -->
 <section class="ex-section" id="hareketler">
   <span class="stag">Egzersiz Rehberi</span>
   <h2 class="stitle">TEMEL HAREKETLER</h2>
-  <p class="sdesc">Her seviyede öğrenilmesi gereken altı temel egzersiz. Doğru form her şeyin başlangıcıdır — ağırlık ikinci sıraya gelir.</p>
+  <p class="sdesc">Her seviyede öğrenilmesi gereken altı temel fitness egzersizi. Doğru form her şeyin başlangıcıdır.</p>
   <div class="ex-grid">
     <div class="ex-card reveal">
       <h4>SQUAT (ÇÖMELİŞ)</h4>
       <div class="muscles">▸ Bacak · Kalça · Core</div>
-      <p>Ayaklar omuz genişliğinde açık. Kalçayı arkaya götürerek dizler parmak uçlarının önüne geçmeden aşağı inin. Topuklardan iterek kalkın. Alt vücudun temel güç hareketidir; hem hafif hem ağır siklet programlarında yer alır.</p>
+      <p>Ayaklar omuz genişliğinde açık. Kalçayı arkaya götürerek dizler parmak uçlarının önüne geçmeden aşağı inin. Topuklardan iterek kalkın.</p>
     </div>
     <div class="ex-card reveal">
       <h4>BENCH PRESS (GÖĞÜS BASKISI)</h4>
       <div class="muscles">▸ Göğüs · Omuz · Triceps</div>
-      <p>Barlı ya da dumbbell ile ağırlığı göğüs hizasına indirin, ardından yukarı itin. Omuzlar bankta sabit, sırt hafif kavisli olmalı. Üst vücudun en temel itme hareketidir; 8–12 tekrar hedefleyin.</p>
+      <p>Barlı ya da dumbbell ile ağırlığı göğüs hizasına indirin, ardından yukarı itin. Üst vücudun en temel itme hareketidir.</p>
     </div>
     <div class="ex-card reveal">
       <h4>DEADLIFT (YER ÇEKİŞİ)</h4>
-      <div class="muscles">▸ Sırt · Kalça · Bacak · Core</div>
-      <p>Barı omuz altına alın, sırtı düz tutarak kalçadan öne eğilin. Topuklardan basarak sırt düz kalkın. Tüm vücudu çalıştıran en kapsamlı bileşik harekettir; ileri seviyeye geçmeden form mutlaka oturmalıdır.</p>
+      <div class="muscles">▸ Sırt · Kalça · Bacak</div>
+      <p>Barı omuz altına alın, sırtı düz tutarak kalçadan öne eğilin. Topuklardan basarak sırt düz kalkın.</p>
     </div>
     <div class="ex-card green reveal">
       <h4>BİCEP CURL (BİSEPS)</h4>
       <div class="muscles">▸ Ön Kol · Biceps</div>
-      <p>Dirsekler yanda sabit kalarak dumbbell'ları omuz yüksekliğine kaldırın, kontrollü indirin. Başlangıç için hafif ağırlıkla 12–15 tekrar idealdir. Küçük kas grubuna ait olduğundan antrenmanın sonunda yapılır.</p>
+      <p>Dirsekler yanda sabit kalarak dumbbell'ları omuz yüksekliğine kaldırın, kontrollü indirin.</p>
     </div>
     <div class="ex-card green reveal">
-      <h4>SHOULDER PRESS (OMUZ BASKISI)</h4>
+      <h4>SHOULDER PRESS (OMUZ)</h4>
       <div class="muscles">▸ Omuz · Trapez · Triceps</div>
-      <p>Dumbbell'ları omuz hizasında tutun ve baş üstüne itin. Bel desteklenmeli, core sıkılı olmalı. Üst vücut güçlendirmede temel hareketlerden biridir; ip atlama veya koşu bandı ile ısındıktan sonra başlayın.</p>
+      <p>Dumbbell'ları omuz hizasında tutun ve baş üstüne itin. Bel desteklenmeli, core sıkılı olmalı.</p>
     </div>
     <div class="ex-card orange reveal">
       <h4>PLANK (TAHTA POZ)</h4>
       <div class="muscles">▸ Core · Karın · Sırt</div>
-      <p>Önkol veya el üzerinde vücudu düz bir tahta gibi tutun; kalça ne yukarıda ne aşağıda olmalı. Core stabilitesi, tüm diğer hareketlerin güvenli yapılması için temeldir. Başlangıç için 20–30 saniye yeterlidir.</p>
+      <p>Önkol veya el üzerinde vücudu düz bir tahta gibi tutun; kalça ne yukarıda ne aşağıda olmalı.</p>
     </div>
   </div>
 </section>
 
-<!-- PROGRAM TIMELINE -->
+<section class="pilates-section" id="klinik-pilates" style="padding:96px 48px;">
+  <span class="stag">Klinik &amp; Rehabilitasyon</span>
+  <h2 class="stitle">FİZİK TEDAVİ (KLİNİK) PİLATESİ</h2>
+  <p class="sdesc">Sadece spor amaçlı değil, bel, boyun fıtıkları, fibromiyalji ve duruş bozuklukları (kifoz vb.) tedavisine yönelik fizyoterapist eşliğinde yapılan özelleştirilmiş hareket bütünüdür. Omurga sağlığını destekler, kasları güçlendirir ve kronik ağrıları azaltır.</p>
+  
+  <div class="pilates-banner reveal">
+    <div class="icon">⚠️</div>
+    <div class="text">
+      <strong>Önemli Bilgi:</strong> Hamilelik, ameliyat sonrası veya kronik rahatsızlığı olanlar mutlaka uzman fizyoterapist eşliğinde çalışmalıdır. Egzersiz sırasında ağrı hissedilirse hareket anında bırakılmalıdır.
+    </div>
+  </div>
+
+  <div class="ex-grid">
+    <div class="ex-card purple reveal">
+      <h4>PELVİK EĞİM (PELVİC TİLT)</h4>
+      <div class="muscles">▸ Bel · Alt Karın</div>
+      <p>Sırtüstü yatarken dizler bükülü, bel boşluğunu yere doğru hafifçe bastırıp karnı sıkma hareketidir. Bel ağrılarını hafifletmede çok etkilidir.</p>
+    </div>
+    <div class="ex-card purple reveal">
+      <h4>KÖPRÜ KURMA (BRİDGE)</h4>
+      <div class="muscles">▸ Omurga · Kalça · Arka Bacak</div>
+      <p>Sırtüstü pozisyonda ayaklar yerde, kalçayı yerden kaldırıp omurgayı omuzlardan dizlere kadar düz bir hatta hizalama hareketidir.</p>
+    </div>
+    <div class="ex-card purple reveal">
+      <h4>DİZ-GÖĞÜS (KNEE TO CHEST)</h4>
+      <div class="muscles">▸ Bel Esnetme · Kalça</div>
+      <p>Sırtüstü yatarken dizleri sırayla veya aynı anda nazikçe göğse çekip bekleme egzersizidir. Lumbar (bel) bölgesindeki gerginliği alır.</p>
+    </div>
+    <div class="ex-card purple reveal">
+      <h4>KEDİ-İNEK (CAT-COW)</h4>
+      <div class="muscles">▸ Tüm Omurga · Sırt</div>
+      <p>Dört ayak (diz ve eller) üzerindeyken nefes alarak omurgayı içeri kavis yapıp (inek), nefes vererek sırtı tavana doğru yuvarlama (kedi) hareketidir.</p>
+    </div>
+    <div class="ex-card purple reveal">
+      <h4>ÇOCUK POZU (CHİLD'S POSE)</h4>
+      <div class="muscles">▸ Sırt · Bel · Omuzlar</div>
+      <p>Dizlerin üzerine oturup gövdeyi öne uzatarak elleri ileri kaydırma hareketidir. Antrenman sonrası dinlenme ve uzama için kusursuzdur.</p>
+    </div>
+    <div class="ex-card purple reveal">
+      <h4>SEANS YAPISI</h4>
+      <div class="muscles">▸ 45-60 Dakika Toplam Süre</div>
+      <p>Klinik Pilates seanslarımız; 10 dakika ısınma, 25-40 dakika ana tedavi/reformer egzersizleri ve 10 dakika soğuma periyotlarından oluşur.</p>
+    </div>
+  </div>
+</section>
+
 <section class="prog-section" id="program">
   <span class="stag">Antrenman Planı</span>
   <h2 class="stitle">ANTRENMAN SIRASI</h2>
-  <p class="sdesc">Bir seans içinde doğru sırayı takip ederek maksimum verim alın ve sakatlık riskini sıfıra yaklaştırın.</p>
   <div class="prog-grid">
     <div class="timeline">
       <div class="titem reveal">
         <div class="tdot g">1</div>
         <div class="tcontent">
           <h4>ISINMA — Hafif / Ağırlıksız</h4>
-          <p>5–10 dakika düşük yoğunluklu kardiyo (koşu bandı, bisiklet) veya dinamik hareketler (yüksek diz, akciğer, ip atlama). Statik germe ısınmada değil, soğumada yapılmalıdır — araştırmalar statik germenin antrenman öncesi performansı olumsuz etkileyebildiğini göstermektedir.</p>
+          <p>5–10 dakika düşük yoğunluklu kardiyo veya dinamik hareketler. Statik germe ısınmada değil, soğumada yapılmalıdır.</p>
         </div>
       </div>
       <div class="titem reveal">
         <div class="tdot g">2</div>
         <div class="tcontent">
           <h4>FORM ÖĞRENME — Hafif Ağırlık</h4>
-          <p>Çalışacağınız hareketin boş barla veya çok hafif ağırlıkla 1–2 seti yapılır. Bu aşama sinir sistemini harekete hazırlar ve motor kalıpları pekiştirir. Tekniği doğru öğrenmek, ileride ağır kaldırmanın en sağlam temelidir.</p>
+          <p>Çalışacağınız hareketin boş barla veya çok hafif ağırlıkla 1–2 seti yapılır.</p>
         </div>
       </div>
       <div class="titem reveal">
         <div class="tdot y">3</div>
         <div class="tcontent">
           <h4>ANA ÇALIŞMA — Orta / Ağır</h4>
-          <p>Asıl çalışma setlerine geçin. Ağırlık, hedeflenen tekrar sayısını (8–12 tekrar) teknik bozulmadan çıkarabileceğiniz orta-ağır seviyede olmalıdır. Her sette kaslar zorlanmalı, ama form asla feda edilmemelidir.</p>
+          <p>Hedeflenen tekrar sayısını teknik bozulmadan çıkarabileceğiniz orta-ağır seviyede uygulanır.</p>
         </div>
       </div>
       <div class="titem reveal">
-        <div class="tdot o">4</div>
+        <div class="tdot w">4</div>
         <div class="tcontent">
-          <h4>TÜKENİŞ SETİ — Ağır (İsteğe Bağlı)</h4>
-          <p>Enerji kaldıysa, teknik formu bozmadan son seti daha ağır ağırlıkla yapabilirsiniz. Yeni başlayanlar için önerilmez. 5–8 tekrar aralığında, setler arası 2–3 dakika dinlenmeyle uygulanır.</p>
-        </div>
-      </div>
-      <div class="titem reveal">
-        <div class="tdot w">5</div>
-        <div class="tcontent">
-          <h4>SOĞUMA, ESNELİK &amp; BESLENME</h4>
-          <p>Statik germe ve nefes egzersizleriyle vücudu sakinleştirin; yüksek kortizolü düşürün. Antrenman sonrası protein ve karbonhidrat kombinasyonu kas protein sentezini önemli ölçüde artırır. Glikojen depolarını yenilemek için hem protein hem karb tüketilmelidir.</p>
+          <h4>SOĞUMA &amp; ESNELİK</h4>
+          <p>Statik germe, çocuk pozu gibi pilates hareketleri ve nefes egzersizleriyle vücudu sakinleştirin.</p>
         </div>
       </div>
     </div>
@@ -472,122 +464,49 @@
       <ul class="tips-list">
         <li>
           <div class="tip-i">🎯</div>
-          <div><strong>Genişten Küçüğe:</strong> Önce büyük kaslar (bacak, sırt, göğüs), sonra küçük kaslar (triceps, biceps). Küçük kasları yorulmuş halde büyük egzersizlere asla girmeyin.</div>
+          <div><strong>Genişten Küçüğe:</strong> Önce büyük kaslar, sonra küçük kaslar.</div>
         </li>
         <li>
           <div class="tip-i">✅</div>
-          <div><strong>Form Her Şeydir:</strong> Ağır kaldırmak için formu bozmak sakatlanmanın bir numaralı nedenidir. Gerekirse ağırlığı düşürün; tekniği asla feda etmeyin.</div>
-        </li>
-        <li>
-          <div class="tip-i">📈</div>
-          <div><strong>Kademeli Artış:</strong> Her hafta ya da iki haftada bir %2–10 oranında artırın. İlk 30 günde lineer progresyon yöntemiyle gözle görülür güç artışı mümkündür.</div>
+          <div><strong>Form Her Şeydir:</strong> Ağır kaldırmak için formu bozmak sakatlanmanın ana nedenidir.</div>
         </li>
         <li>
           <div class="tip-i">⏱️</div>
-          <div><strong>Dinlenme Süreleri:</strong> Orta ağırlık setleri arası 60–90 saniye; ağır setler arasında 2–3 dakika tam dinlenme. Kas yorgunluğunu önlemek için bu süreler atlanmamalıdır.</div>
-        </li>
-        <li>
-          <div class="tip-i">💧</div>
-          <div><strong>Nefes &amp; Hidrasyon:</strong> Kaldırma sırasında nefes verin, indirirken nefes alın. Antrenman boyunca düzenli su için; dehidrasyon güvenliği ve performansı doğrudan etkiler.</div>
-        </li>
-        <li>
-          <div class="tip-i">🔄</div>
-          <div><strong>Uzun Vadeli Yaklaşım:</strong> Orta-ağır seviyede teknik ve kondisyona odaklanmak, her seans tavan yapmaktan çok daha sürdürülebilir ve uzun vadeli kazanım sağlar.</div>
+          <div><strong>Dinlenme Süreleri:</strong> Set aralarında 60-90 saniye dinlenmeyi es geçmeyin.</div>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- GALERI -->
 <section class="gallery-section" id="galeri">
   <div class="gallery-header">
-    <span class="stag">Spor Salonu</span>
+    <span class="stag">Spor Salonu &amp; Stüdyo</span>
     <h2 class="stitle">GALERİ</h2>
   </div>
   <div class="gallery-grid">
-    <div class="gitem"><img src="spr.jpg" alt="Genel Salon" /><div class="gcap">Genel Salon Alanı</div></div>
-    <div class="gitem"><img src="spr2.jpg" alt="Ağırlık Alanı" /><div class="gcap">Ağırlık &amp; Güç Alanı</div></div>
-    <div class="gitem"><img src="spr_3.jpg" alt="Cardio Alan" /><div class="gcap">Cardio &amp; Koşu Alanı</div></div>
-    <div class="gitem"><img src="WhatsApp_Image_2026-04-18_at_12_42_27__1_.jpeg" alt="Fitness" /><div class="gcap">Fitness Antrenmanı</div></div>
-    <div class="gitem"><img src="WhatsApp_Image_2026-04-18_at_12_42_27.jpeg" alt="Pilates" /><div class="gcap">Reformer Pilates</div></div>
+    <div class="gitem"><img src="WhatsApp Image 2026-04-18 at 13.24.39 (7).jpg" alt="Pilates Esneme" /><div class="gcap">Reformer Pilates &amp; Esneklik Eğitimleri</div></div>
+    <div class="gitem"><img src="WhatsApp Image 2026-04-18 at 13.24.39 (8).jpg" alt="Reformer Pilates Toplu Egzersiz" /><div class="gcap">Denge ve Koordinasyon</div></div>
+    <div class="gitem"><img src="WhatsApp Image 2026-04-18 at 13.24.39 (3).jpeg" alt="Göğüs Press Ekipmanı" /><div class="gcap">Profesyonel Fitness Ekipmanları</div></div>
+    <div class="gitem"><img src="WhatsApp Image 2026-04-18 at 13.24.39 (6).jpeg" alt="Fizyoterapist Eşliğinde Pilates" /><div class="gcap">Eğitmen Eşliğinde Doğru Postür</div></div>
+    <div class="gitem"><img src="WhatsApp Image 2026-04-18 at 13.24.40 (5).jpg" alt="Pilates Topuyla Egzersiz" /><div class="gcap">Klinik Pilates Uygulamaları</div></div>
   </div>
 </section>
 
-<!-- ÖĞREN KARTLARI -->
-<section class="learn-section" id="ogrenin">
-  <span class="stag">Antrenman Bilgisi</span>
-  <h2 class="stitle">ANTRENMAN TEMELLERİ</h2>
-  <p class="sdesc">Başlangıçtan ileri seviyeye kadar bilmeniz gereken her şey — uzman kaynaklardan derlendi, salonumuzda uygulanıyor.</p>
-  <div class="learn-grid">
-    <div class="learn-card reveal">
-      <div class="lnum">01</div>
-      <span class="ltag">Başlangıç Seviyesi</span>
-      <h4>BAŞLANGIÇ REHBERİ</h4>
-      <p>Ağırlık antrenmanına ilk adımı atmadan önce bilinmesi gerekenler:</p>
-      <ul>
-        <li>Temel hareketleri öğrenmeden ağır kaldırmaya çalışmayın</li>
-        <li>Başlangıçta en önemli şey teknik; ağırlık ikincil önemdedir</li>
-        <li>Aynanın önünde çalışın, formu sürekli kontrol edin</li>
-        <li>Yüksek tekrar, hafif direnç ile başlayın (12–15 tekrar)</li>
-        <li>Salondan geçen deneyimli bir kişiden yardım istemekten çekinmeyin</li>
-        <li>2 saatlik antrenman değil, kısa ve kaliteli seans hedefleyin</li>
-      </ul>
-    </div>
-    <div class="learn-card lc2 reveal">
-      <div class="lnum">02</div>
-      <span class="ltag">Orta Seviye · Karşılaştırma</span>
-      <h4>HAFİF Mİ, AĞIR MI?</h4>
-      <p>Araştırmalar her iki yaklaşımın da kas gelişimine katkı sağladığını ortaya koyuyor:</p>
-      <ul>
-        <li>Hafif ağırlık + yüksek tekrar → dayanıklılık ve kas tonu</li>
-        <li>Ağır ağırlık + düşük tekrar → maksimum güç ve kas hacmi</li>
-        <li>En iyi sonuç: iki yaklaşımı döngüsel olarak değiştirmek</li>
-        <li>Sakatlanma riski hafif sikletle çok daha düşüktür</li>
-        <li>Orta-ağır seviyede kalmak uzun vadede en sürdürülebilir tercihtir</li>
-        <li>Hangi seviyeyi seçerseniz seçin: form hiçbir zaman feda edilmez</li>
-      </ul>
-    </div>
-    <div class="learn-card lc3 reveal">
-      <div class="lnum">03</div>
-      <span class="ltag">İleri Seviye · Güç</span>
-      <h4>30 GÜNDE LİNEER PROGRESYON</h4>
-      <p>İlk ayda gücünüzü sistematik şekilde artırmanın kanıtlanmış yolu:</p>
-      <ul>
-        <li>Her antrenman seansında ağırlığı küçük miktarda (2.5 kg) artırın</li>
-        <li>Squat, Deadlift, Bench Press — bu 3 harekete odaklanın</li>
-        <li>Küçük artışlar büyük sıçramalardan çok daha güvenlidir</li>
-        <li>İlk 30 günde görünür güç artışı tamamen gerçekçi ve ulaşılabilirdir</li>
-        <li>Form mükemmelleşmeden ağır siklete kesinlikle geçmeyin</li>
-        <li>Uzman eğitmen rehberliği bu aşamada zorunlu sayılmalıdır</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<div class="quote-sec">
-  <span class="qmark">"</span>
-  <p class="qtext">Ben sporcunun zeki, çevik ve aynı zamanda ahlaklısını severim.</p>
-  <div class="qauthor">— Mustafa Kemal Atatürk</div>
-</div>
-
-<!-- CTA -->
 <section class="cta-sec">
   <div>
     <h2>SAĞLIKLI BİR GELECEĞİN ANAHTARI <span>AKTİF VE DENGELİ</span> BİR YAŞAM TARZINDA YATAR.</h2>
-    <p>6 uzman personelimiz ve 550 kişilik kapasitemizle her gün 09:00–19:00 saatleri arasında hizmetinizdeyiz. Kayıt için 444 4 360 / 7996 numaralı Spor Kayıt Masası'nı arayabilir veya online kayıt formunu doldurabilirsiniz.</p>
+    <p>6 uzman personelimiz ve 550 kişilik kapasitemizle hizmetinizdeyiz. Fitness ve Fizik Tedavi Pilatesi kayıtları için 444 4 360 / 7996 numaralı Spor Kayıt Masası'nı arayabilirsiniz.</p>
   </div>
   <div>
     <a href="https://forms.kucukcekmece.bel.tr" target="_blank" class="btn-p" style="white-space:nowrap;">Hemen Kayıt Ol</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="fbrand">
     <span class="flogo">KÜÇÜKÇEKMECE GENÇLİK MERKEZİ</span>
-    <p>Halkali Gençlik Merkezi Fitness Salonu — Reformer Pilates, Fitness ve uzman eğitmen rehberliğiyle gençlerimizin sağlıklı yaşam yolculuğuna ortak oluyoruz.</p>
+    <p>Halkalı Gençlik Merkezi Spor Salonu — Uzman eğitmen rehberliğiyle gençlerimizin sağlıklı yaşam yolculuğuna ortak oluyoruz.</p>
     <br>
     <p>📞 444 4 360 / 7996<br>🕘 09:00 – 19:00<br>📍 Halkalı Merkez Mah., Küçükçekmece / İstanbul</p>
   </div>
@@ -595,12 +514,10 @@
     <h5>İçerik</h5>
     <ul>
       <li><a href="#hakkinda">Hakkında</a></li>
-      <li><a href="#iletisim">İletişim &amp; Ulaşım</a></li>
       <li><a href="#sikletler">Hafif · Orta · Ağır Siklet</a></li>
       <li><a href="#hareketler">Temel Hareketler</a></li>
-      <li><a href="#program">Antrenman Sırası</a></li>
+      <li><a href="#klinik-pilates">Fizik Tedavi Pilatesi</a></li>
       <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#ogrenin">Antrenman Temelleri</a></li>
     </ul>
   </div>
   <div class="fcol">
@@ -609,13 +526,12 @@
       <li><a href="https://kucukcekmece.istanbul" target="_blank">Küçükçekmece Belediyesi</a></li>
       <li><a href="https://forms.kucukcekmece.bel.tr" target="_blank">Online Kayıt Formu</a></li>
       <li><a href="https://sikayet.kucukcekmece.bel.tr/istek_Sikayet_bildirim" target="_blank">Talep &amp; Şikayet</a></li>
-      <li><a href="https://kucukcekmece.istanbul/icerikler/spor-merkezleri/halkali-genclik-merkezi-fitness-salonu/31718" target="_blank">Resmi Merkez Sayfası</a></li>
     </ul>
   </div>
 </footer>
 <div class="foot-bot">
-  <span>© 2026 Küçükçekmece Belediyesi — Halkali Gençlik Merkezi Spor Salonu</span>
-  <span>Fitness &amp; Reformer Pilates</span>
+  <span>© 2026 Küçükçekmece Belediyesi — Halkalı Gençlik Merkezi Spor Salonu</span>
+  <span class="dev-credit">Geliştirici: Esmanur Çaça</span>
 </div>
 
 <script>
